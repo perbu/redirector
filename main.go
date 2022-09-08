@@ -39,7 +39,7 @@ func (r redisSimple) lookup(ctx context.Context, key string) (string, error) {
 }
 
 // HTTP Handler for redirects
-func (r *redirector) redirectHandler(w http.ResponseWriter, req *http.Request) {
+func (r redirector) redirectHandler(w http.ResponseWriter, req *http.Request) {
 	ctx := context.TODO()
 	key, err := getFullUrl(req)
 	if err != nil {
